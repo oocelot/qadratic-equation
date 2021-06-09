@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<
+<head>
+	<title>дскриминант не рассист</title>
+</head>
+<body>
+	<script type="text/javascript">
+		a =parseInt( prompt('введи A',1));
+		b =parseInt( prompt('введи B',1));
+		c =parseInt( prompt('введи C',1));
+		d =b*b-4*a*c;
+		CanERor ='';
+		
+		if(a == 0){
+				if (b == 0) {
+					if(c ==0 ){
+							CanERor='многа'	//000
+					}
+					else{
+							CanERor='7=0'	//001
+					}
+				}
+				else{
+					if(c ==0 ){
+								CanERor='0'		//010
+					}
+					else{
+								CanERor= -c/b;	//011
+					}
+				}
+			}
+
+			
+			else{
+				if (b == 0) {
+					if(c ==0 ){
+								CanERor='0'		//100
+					}
+					else{
+									komp=-c/a;
+									if(komp < 0){ CanERor=('+_'+Math.sqrt(-komp)+'i') ;}	//101
+									else{  CanERor ='+_'+Math.sqrt(komp); }
+					}
+				}
+				else
+				{
+					if(c==0){
+								CanERor='x1=0 x2='+(-b/a);		//110
+					}
+					else{
+								if (d>=0) {
+									CanERor=' '+((-b+Math.sqrt(d))/(2*a)+' '+(-b-Math.sqrt(d))/(2*a));
+								}	
+								else{
+									first=  Math.round(-b/(2*a)*100)/100+  '+'  + Math.round(Math.sqrt(-d)/(2*a)*100)/100 +'i';
+									second=  Math.round(-b/(2*a)*100)/100+  '-' + Math.round(Math.sqrt(-d)/(2*a)*100)/100 +'i';
+									CanERor=first+' '+second;
+								}	//111
+					}
+				}
+
+			}
+
+			alert(CanERor);
+
+	</script>
+</body>
+</html>	
